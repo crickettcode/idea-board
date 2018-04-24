@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import HomePage from './components/HomePage'
@@ -12,9 +10,6 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <div>
-            <Link to='/login'>Login Link</Link>
-          </div>
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/login" component={LogInPage} />
@@ -26,7 +21,4 @@ class App extends Component {
   }
 }
 
-
-
-
-export default App;
+export default App

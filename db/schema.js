@@ -42,5 +42,3 @@ const Idea = mongoose.model('Idea', IdeaSchema)
 module.exports = {
   User, Idea
 }
-
-
