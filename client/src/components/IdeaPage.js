@@ -6,6 +6,7 @@ const Dogshit = styled.img`
 `
 const YourMom = styled.div`
 display:flex;
+justify-content:center;
 margin:auto;
 
 button {
@@ -21,7 +22,7 @@ display:flex;
 flex-direction: row;
 justify-content:space-around;
 padding: 1.5rem;
-border-radius: 10px;
+border-radius: 10px; 
 
 
 }
@@ -39,6 +40,14 @@ input {
     
 
 
+}
+
+textarea {
+    background:;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    font-family:monospace;
 }
 
 }
