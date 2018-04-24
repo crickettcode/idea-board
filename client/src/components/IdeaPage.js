@@ -40,8 +40,6 @@ input {
     padding:1.5rem;
     border-color: #D46A6A;
     
-
-
 }
 
 textarea {
@@ -53,9 +51,7 @@ textarea {
     color:#801515;
     font-size:12px;
     padding:1.8rem;
-     
-
-
+    
 }
 
 }
@@ -72,6 +68,9 @@ h1 {
  font-size:45px; 
  display:flex;
  justify-content:center;
+ font:bold;
+ font-weight: bolder;
+
 
 
 }
