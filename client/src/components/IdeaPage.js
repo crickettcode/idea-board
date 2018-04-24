@@ -1,3 +1,7 @@
+import React, { Component } from 'react'
+
+
+
 class IdeaPage extends Component {
     render() {
         return (
