@@ -4,6 +4,12 @@ import styled from 'styled-components'
 import HomePage from './components/HomePage'
 import LogInPage from './components/LogInPage'
 import IdeaPage from './components/IdeaPage'
+import { injectGlobal } from "styled-components"
+
+
+injectGlobal`
+@import url ('https://fonts.googleapis.com/css?family=Gugi');
+`
 
 class App extends Component {
   render() {

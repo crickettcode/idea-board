@@ -7,17 +7,62 @@ const Dogshit = styled.img`
 const YourMom = styled.div`
 display:flex;
 margin:auto;
+
 button {
 
 
+font-family:monospace;
+color:whitesmoke;   
+border:solid;
+border-width: 10px; 
+border-color:#801515;
+background:#D46A6A;
+display:flex;
+flex-direction: row;
+justify-content:space-around;
+padding: 1.5rem;
+border-radius: 10px;
+
+
 }
+
+
 input {
+    display:flex;
+    justify-content:space-around;
+    background-color:#801515;
+    font-family:monospace;
+    color:whitesmoke;
+    border-width:10px;
+    padding:1.5rem;
+    border-color: #D46A6A;
+    
 
 
 }
 
 }
 `
+
+const YourDad = styled.div`
+
+
+
+h1 { 
+    
+ font-family:monospace;
+ color:#FFAAAA;
+ font-size:45px; 
+ display:flex;
+ justify-content:center;
+
+
+}
+
+
+}`
+
+
 
 
 
@@ -73,11 +118,12 @@ class IdeaPage extends Component {
 
         return (
             <div>
-                <div>
+                <YourDad>
                     <h1>{this.state.user.userName}'s Idea Board</h1>
                     <button>New Idea</button>
-                </div>
+                </YourDad>
                 <div>
+
                     {ideas}
                 </div>
             </div>
