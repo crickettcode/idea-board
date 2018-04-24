@@ -22,7 +22,6 @@ class LogIn extends Component {
             })
     }
 
-
     createUser = () => {
         axios.post('/api/users', {
             user: this.state.user
@@ -31,15 +30,9 @@ class LogIn extends Component {
         })
     }
 
-
-    handleSignUp = (event) => {
-        event.preventDefault()
-        axios.post('/api/users', { user: this.state.user })
-            .then((response) => {
-                console.log(response.body)
-                event.preventDefault()
-                this.createUser()
-            })
+    handleSignUp = (e) => {
+        e.preventDefault()
+        this.createUser()
     }
 
     handleChange = (event) => {
@@ -48,20 +41,13 @@ class LogIn extends Component {
         this.setState({ user })
     }
 
-
-
-
     render() {
-        console.log("Users in state at LogIn Render", this.state.users)
         const userLinks = this.state.users.map((user, i) => {
             return (
                 <div key={i}>
                     <Link to={`/user/${user._id}`}>{user.userName}</Link>
                 </div>)
         })
-
-
-
 
         return (
             <div>
@@ -83,8 +69,6 @@ class LogIn extends Component {
                     </div>
                     <button>Sign Up</button>
                 </form>
-
-
             </div>
         )
     }

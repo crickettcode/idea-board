@@ -26,15 +26,10 @@ class IdeaPage extends Component {
         }]
     }
 
-    //handleChange = (event) => {
-    // console.log(event.target)
-    //}
-
-
     componentDidMount() {
         const userId = this.props.match.params.userId
         console.log(userId)
-        axios.get(`/api/user/${userId}`)
+        axios.get(`/api/users/${userId}`)
             .then(response => {
                 console.log(response.data)
                 this.setState({
@@ -47,14 +42,14 @@ class IdeaPage extends Component {
     render() {
         const ideas = this.state.ideas.map((idea, i) => {
             return (
-                <div key={i} >
+                <div key={i}>
                     <input type="text" name="title" value={idea.title} onChange={this.handleChange} />
-                    <textarea name="description" value={ideas.description} onChange={this.handleChange} />
+                    <textarea name="description" value={idea.description} onChange={this.handleChange} />
                     <button>Delete Idea</button>
                 </div>
             )
-
         })
+
         return (
             <div>
                 <div>
@@ -62,14 +57,11 @@ class IdeaPage extends Component {
                     <button>New Idea</button>
                 </div>
                 <div>
-
+                    {ideas}
                 </div>
-                {ideas}
             </div>
-
         )
     }
-
 }
 
 
