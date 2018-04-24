@@ -2,6 +2,26 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
+const Dogshit = styled.img`
+`
+const YourMom = styled.div`
+display:flex;
+margin:auto;
+button {
+
+
+}
+input {
+
+
+}
+
+}
+`
+
+
+
+
 class IdeaPage extends Component {
     state = {
         user: {
@@ -42,11 +62,12 @@ class IdeaPage extends Component {
     render() {
         const ideas = this.state.ideas.map((idea, i) => {
             return (
-                <div key={i}>
+                <YourMom key={i}>
                     <input type="text" name="title" value={idea.title} onChange={this.handleChange} />
                     <textarea name="description" value={idea.description} onChange={this.handleChange} />
                     <button>Delete Idea</button>
-                </div>
+
+                </YourMom>
             )
         })
 
